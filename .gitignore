@@ -1,0 +1,26 @@
+# # Python virtual environment
+# myvenv/
+# venv/
+# env/
+
+# # models
+# caption_hashtag_model/
+# caption_hashtag_model.zip
+
+# # Python cache files
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
+# *.pdb
+# *.egg
+# *.egg-info/
+# dist/
+# build/
+# .eggs/
+
+# # Jupyter Notebook checkpoints
+# .ipynb_checkpoints/
+
+# # VSCode settings
+# .vscode/

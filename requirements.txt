@@ -1,0 +1,13 @@
+# Web server
+flask
+
+# Core ML libraries
+torch
+transformers
+datasets
+
+# Image processing
+Pillow
+
+# Optional (if you're using IPython features in notebooks)
+ipython

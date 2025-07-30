@@ -3,6 +3,7 @@ flask
 
 # Core ML libraries
 torch
+torchvision
 transformers
 datasets
 

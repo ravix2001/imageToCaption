@@ -3,11 +3,12 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
 import torch
+import os
 
 app = Flask(__name__)
 
 # Load BLIP model and processor (image -> description)
-blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base", use_fast=True)
+blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base", use_fast=False) # use_fast=False for low memory usage in deployment
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to("cuda" if torch.cuda.is_available() else "cpu")
 blip_model.eval()
 
@@ -49,5 +50,6 @@ def generate():
     })
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5050))  # Use PORT env var from Render
+    app.run(host="0.0.0.0", port=port)

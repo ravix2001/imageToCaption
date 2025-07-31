@@ -1,14 +1,5 @@
-# Web server
-flask
-
-# Core ML libraries
 torch
-torchvision
 transformers
-datasets
-
-# Image processing
+gradio
 Pillow
-
-# Optional (if you're using IPython features in notebooks)
-ipython
+sentencepiece
